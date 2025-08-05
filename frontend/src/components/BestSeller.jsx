@@ -6,7 +6,7 @@ import ProductItem from './ProductItem'
 const BestSeller = () => {
 
   const {products} = useContext(ShopContext)
-  console.log(products);
+  // console.log(products);
   
   const [bestSeller, setBestSeller] = useState([])
 
@@ -15,7 +15,7 @@ const BestSeller = () => {
       item.bestseller 
     ))
     setBestSeller(bestProduct.slice(0, 10))
-    console.log(bestProduct);
+    // console.log(bestProduct);
     
   }, [])
 
