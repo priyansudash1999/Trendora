@@ -8,7 +8,7 @@ const Product = () => {
 
   const {productId} = useParams();
   // console.log(productId);
-  const{products, currency} = useContext(ShopContext)
+  const{products, currency, addToCart} = useContext(ShopContext)
   const [productData, setProductData] = useState(false)
   const [image, setImage] = useState('')
   const [size, setSize] = useState('')
@@ -71,7 +71,7 @@ const Product = () => {
               </div>
             </div>
 
-            <button className='bg-black text-white py-3 px-5 rounded-lg active:bg-gray-600'>Add To Cart</button>
+            <button onClick={() => addToCart(productData._id, size)} className='bg-black text-white py-3 px-5 rounded-lg active:bg-gray-600'>Add To Cart</button>
 
             <hr className='mt-8 sm:w-4/5 text-gray-300' />
             <div className='text-sn text-gray-500 mt-5 flex flex-col gap-1'>
@@ -99,7 +99,7 @@ const Product = () => {
       </div>
 
       {/* Related products */}
-      {/* <RelatedProducts category={productData.category} subCategory={productData.subCategory}/> */}
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory}/>
     </div>
   ) : 
   <div className='opacity-0'>
