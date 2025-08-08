@@ -29,3 +29,7 @@
 #### Why `<ShopContextProvider>` is important in main.jsx after install useContext ?
 
 # StructureClone()
+
+# Backend
+
+> npm i cors dotenv express jsonwebtoken mongoose multer nodemon razorpay stripe validator cloudinary bcrypt
