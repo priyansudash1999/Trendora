@@ -29,7 +29,7 @@ const loginUser = async(req, res) => {
     else{
       res.json({
         success: false,
-        message: 'Ivalid Password'
+        message: 'Invalid Password'
       })
     }
   } catch (error) {
@@ -100,6 +100,7 @@ const registerUser = async(req, res) => {
 
 const adminLogin = async(req, res) => {
 
+  
 }
 
 export {loginUser, registerUser, adminLogin}
